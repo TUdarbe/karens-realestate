@@ -39,7 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   Blog
                   <span className="absolute -bottom-0.5 left-0 w-0 h-[1.5px] bg-steel transition-all duration-300 group-hover:w-full" />
                 </Link>
-                <Link href="#about" className="text-slate-500 hover:text-navy font-medium text-sm transition-colors relative group">
+                <Link href="/about" className="text-slate-500 hover:text-navy font-medium text-sm transition-colors relative group">
                   About
                   <span className="absolute -bottom-0.5 left-0 w-0 h-[1.5px] bg-steel transition-all duration-300 group-hover:w-full" />
                 </Link>
@@ -80,7 +80,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <ul className="space-y-2.5 text-sm">
                   <li><Link href="/listings" className="text-white/85 hover:text-white transition-colors">All Listings</Link></li>
                   <li><Link href="/blog" className="text-white/85 hover:text-white transition-colors">Market Blog</Link></li>
-                  <li><Link href="#about" className="text-white/85 hover:text-white transition-colors">About Karen</Link></li>
+                  <li><Link href="/about" className="text-white/85 hover:text-white transition-colors">About Karen</Link></li>
                 </ul>
               </div>
               <div>

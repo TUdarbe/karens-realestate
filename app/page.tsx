@@ -172,7 +172,7 @@ export default async function HomePage() {
       </section>
 
       {/* Why Work With Me */}
-      <section id="about" className="bg-white py-16 md:py-20">
+      <section className="bg-white py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-steel text-xs font-bold uppercase tracking-widest mb-2">Why Choose Me</p>
