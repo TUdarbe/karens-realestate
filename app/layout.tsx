@@ -11,7 +11,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Karen [Last Name] | RE/MAX Real Estate",
+  title: "Kay Bolesa | RE/MAX Real Estate",
   description: "Your trusted RE/MAX real estate agent. Browse listings, read market insights, and find your dream home.",
 };
 
@@ -25,8 +25,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Link href="/" className="flex items-center gap-3 group">
                 <Image src="/remax-logo.png" alt="RE/MAX" width={40} height={48} className="object-contain" />
                 <div className="flex flex-col leading-none">
-                  <span className="text-navy font-black text-base tracking-tight">Karen [Last Name]</span>
-                  <span className="text-steel text-[10px] font-semibold uppercase tracking-widest">RE/MAX [Office Name]</span>
+                  <span className="text-navy font-black text-base tracking-tight">Kay Bolesa</span>
+                  <span className="text-steel text-[10px] font-semibold uppercase tracking-widest">RE/MAX Prime Properties</span>
                 </div>
               </Link>
 
@@ -44,15 +44,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   <span className="absolute -bottom-0.5 left-0 w-0 h-[1.5px] bg-steel transition-all duration-300 group-hover:w-full" />
                 </Link>
                 <a
-                  href="tel:+1XXXXXXXXXX"
+                  href="tel:+14168333825"
                   className="bg-navy text-white px-5 py-2 rounded-full font-semibold text-sm hover:bg-steel transition-colors duration-300"
                 >
-                  (XXX) XXX-XXXX
+                  (416) 833-3825
                 </a>
               </nav>
 
-              <a href="tel:+1XXXXXXXXXX" className="md:hidden text-steel font-bold text-sm">
-                (XXX) XXX-XXXX
+              <a href="tel:+14168333825" className="md:hidden text-steel font-bold text-sm">
+                (416) 833-3825
               </a>
             </div>
           </div>
@@ -67,8 +67,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <div className="flex items-center gap-3 mb-4">
                   <Image src="/remax-logo.png" alt="RE/MAX" width={34} height={40} className="object-contain brightness-0 invert" />
                   <div className="flex flex-col leading-none">
-                    <span className="text-white font-black text-base">Karen [Last Name]</span>
-                    <span className="text-steel text-[10px] font-semibold uppercase tracking-widest">RE/MAX [Office Name]</span>
+                    <span className="text-white font-black text-base">Kay Bolesa</span>
+                    <span className="text-steel text-[10px] font-semibold uppercase tracking-widest">RE/MAX Prime Properties</span>
                   </div>
                 </div>
                 <p className="text-white/75 text-sm leading-relaxed">
@@ -80,20 +80,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <ul className="space-y-2.5 text-sm">
                   <li><Link href="/listings" className="text-white/85 hover:text-white transition-colors">All Listings</Link></li>
                   <li><Link href="/blog" className="text-white/85 hover:text-white transition-colors">Market Blog</Link></li>
-                  <li><Link href="/about" className="text-white/85 hover:text-white transition-colors">About Karen</Link></li>
+                  <li><Link href="/about" className="text-white/85 hover:text-white transition-colors">About Kay</Link></li>
                 </ul>
               </div>
               <div>
                 <h3 className="font-bold text-xs uppercase tracking-wider mb-4 text-steel">Contact</h3>
                 <ul className="space-y-2.5 text-sm">
-                  <li><a href="tel:+1XXXXXXXXXX" className="text-white/85 hover:text-white transition-colors">(XXX) XXX-XXXX</a></li>
-                  <li><a href="mailto:karen@example.com" className="text-white/85 hover:text-white transition-colors">karen@example.com</a></li>
-                  <li className="text-white/60">License #XXXXXXX</li>
+                  <li><a href="tel:+14168333825" className="text-white/85 hover:text-white transition-colors">(416) 833-3825</a></li>
+                  <li><a href="mailto:kaybolesa@gmail.com" className="text-white/85 hover:text-white transition-colors">kaybolesa@gmail.com</a></li>
+                  <li className="text-white/60">License #6003320</li>
                 </ul>
               </div>
             </div>
             <div className="border-t border-white/15 mt-8 pt-6 text-center text-white/55 text-xs">
-              © {new Date().getFullYear()} Karen [Last Name] · RE/MAX [Office Name] · Each office independently owned and operated.
+              © {new Date().getFullYear()} Kay Bolesa · RE/MAX Prime Properties · Each office independently owned and operated.
             </div>
           </div>
         </footer>

@@ -78,8 +78,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <div className="flex items-center gap-3 mt-6 pt-6 border-t border-gray-100">
             <div className="w-10 h-10 rounded-full bg-navy flex items-center justify-center text-white font-bold text-sm">K</div>
             <div>
-              <p className="font-bold text-gray-900 text-sm">Karen [Last Name]</p>
-              <p className="text-gray-400 text-xs">RE/MAX [Office Name]</p>
+              <p className="font-bold text-gray-900 text-sm">Kay Bolesa</p>
+              <p className="text-gray-400 text-xs">RE/MAX Prime Properties</p>
             </div>
           </div>
         </header>
@@ -94,11 +94,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <h3 className="text-xl font-black mb-2">Have Questions?</h3>
           <p className="text-slate-400 text-sm mb-5">I&apos;m always happy to chat about the market or help you find your next home.</p>
           <div className="flex justify-center gap-4">
-            <a href="tel:+1XXXXXXXXXX" className="bg-steel text-white px-6 py-3 rounded-lg font-bold text-sm hover:bg-steel-dark transition-colors">
-              (XXX) XXX-XXXX
+            <a href="tel:+14168333825" className="bg-steel text-white px-6 py-3 rounded-lg font-bold text-sm hover:bg-steel-dark transition-colors">
+              (416) 833-3825
             </a>
-            <a href="mailto:karen@example.com" className="bg-white/10 text-white border border-white/20 px-6 py-3 rounded-lg font-bold text-sm hover:bg-white/20 transition-colors">
-              Email Karen
+            <a href="mailto:kaybolesa@gmail.com" className="bg-white/10 text-white border border-white/20 px-6 py-3 rounded-lg font-bold text-sm hover:bg-white/20 transition-colors">
+              Email Kay
             </a>
           </div>
         </div>

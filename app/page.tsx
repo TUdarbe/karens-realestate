@@ -120,12 +120,12 @@ export default async function HomePage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 md:py-36">
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 bg-steel/10 border border-steel/25 text-steel text-[10px] font-bold px-4 py-1.5 rounded-full mb-8 uppercase tracking-[0.18em]">
-              RE/MAX [Office Name]
+              RE/MAX Prime Properties
             </div>
             <h1 className="text-5xl md:text-[4.25rem] font-black text-white leading-[1.05] tracking-tight mb-7">
               Find Your<br />
               <span className="text-steel">Perfect</span> Home<br />
-              With Karen.
+              With Kay.
             </h1>
             <p className="text-slate-400 text-base md:text-lg mb-10 leading-relaxed max-w-md font-light">
               Dedicated RE/MAX agent. Local expertise. Real results — whether you&apos;re buying, selling, or just starting to look.
@@ -134,8 +134,8 @@ export default async function HomePage() {
               <Link href="/listings" className="bg-steel text-white px-7 py-3.5 rounded-full font-bold text-sm uppercase tracking-widest hover:bg-steel-dark transition-colors duration-300 text-center">
                 Browse Listings
               </Link>
-              <a href="tel:+1XXXXXXXXXX" className="text-slate-300 border border-white/15 px-7 py-3.5 rounded-full font-medium text-sm uppercase tracking-widest hover:bg-white/5 hover:border-white/30 hover:text-white transition-all duration-300 text-center">
-                (XXX) XXX-XXXX
+              <a href="tel:+14168333825" className="text-slate-300 border border-white/15 px-7 py-3.5 rounded-full font-medium text-sm uppercase tracking-widest hover:bg-white/5 hover:border-white/30 hover:text-white transition-all duration-300 text-center">
+                (416) 833-3825
               </a>
             </div>
           </div>
@@ -176,7 +176,7 @@ export default async function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-steel text-xs font-bold uppercase tracking-widest mb-2">Why Choose Me</p>
-            <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-4">The Karen Difference</h2>
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-4">The Kay Difference</h2>
             <p className="text-gray-500 max-w-xl mx-auto">Backed by the most recognized brand in real estate, I bring local market expertise and a personal touch to every transaction.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -241,10 +241,10 @@ export default async function HomePage() {
           <h2 className="text-3xl md:text-4xl font-black text-white mb-4">Ready to Make Your Move?</h2>
           <p className="text-slate-400 text-lg mb-8">Whether you&apos;re buying, selling, or just exploring your options — let&apos;s talk. No pressure, just answers.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="tel:+1XXXXXXXXXX" className="bg-steel text-white px-8 py-4 rounded font-bold text-sm uppercase tracking-wide hover:bg-steel-dark transition-colors">
-              Call (XXX) XXX-XXXX
+            <a href="tel:+14168333825" className="bg-steel text-white px-8 py-4 rounded font-bold text-sm uppercase tracking-wide hover:bg-steel-dark transition-colors">
+              Call (416) 833-3825
             </a>
-            <a href="mailto:karen@example.com" className="bg-transparent text-white border-2 border-white px-8 py-4 rounded font-bold text-sm uppercase tracking-wide hover:bg-white/10 transition-colors">
+            <a href="mailto:kaybolesa@gmail.com" className="bg-transparent text-white border-2 border-white px-8 py-4 rounded font-bold text-sm uppercase tracking-wide hover:bg-white/10 transition-colors">
               Send an Email
             </a>
           </div>
