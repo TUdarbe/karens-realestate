@@ -14,7 +14,7 @@ export default function BookPage() {
           <p className="text-slate-400 text-xs font-bold uppercase tracking-widest mb-2">Free & No Obligation</p>
           <h1 className="text-4xl md:text-5xl font-black text-white mb-3">Book a Consultation</h1>
           <p className="text-slate-400 text-base max-w-xl">
-            Pick a time that works for you. Whether you&apos;re buying, selling, or just exploring — let&apos;s talk. No pressure, just honest advice.
+            Pick a time that works for you. Whether you&apos;re buying, selling, or just exploring, let&apos;s talk. No pressure, just honest advice.
           </p>
         </div>
       </section>

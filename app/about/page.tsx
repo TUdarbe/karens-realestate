@@ -131,7 +131,7 @@ export default function AboutPage() {
       <section className="bg-navy py-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-black text-white mb-4">Let&apos;s Work Together</h2>
-          <p className="text-slate-400 text-lg mb-8">Ready to buy, sell, or just have questions? Reach out — no pressure, just honest advice.</p>
+          <p className="text-slate-400 text-lg mb-8">Ready to buy, sell, or just have questions? Reach out. No pressure, just honest advice.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/book" className="bg-steel text-white px-8 py-4 rounded font-bold text-sm uppercase tracking-wide hover:bg-steel-dark transition-colors">
               Book a Consultation

@@ -78,7 +78,7 @@ export default async function ListingsPage() {
           {listings.length === 0 ? (
             <div className="text-center py-24 bg-white rounded-xl border border-gray-100">
               <svg className="w-12 h-12 text-gray-300 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 9.75L12 3l9 6.75V21H3V9.75z" /></svg>
-              <p className="text-gray-400 font-medium">No listings yet — check back soon!</p>
+              <p className="text-gray-400 font-medium">No listings yet. Check back soon!</p>
             </div>
           ) : (
             <div className="space-y-12">

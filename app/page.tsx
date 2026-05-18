@@ -128,7 +128,7 @@ export default async function HomePage() {
               With Kay.
             </h1>
             <p className="text-slate-400 text-base md:text-lg mb-10 leading-relaxed max-w-md font-light">
-              Dedicated RE/MAX agent. Local expertise. Real results — whether you&apos;re buying, selling, or just starting to look.
+              Dedicated RE/MAX agent. Local expertise. Real results. Whether you&apos;re buying, selling, or just starting to look.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <Link href="/listings" className="bg-steel text-white px-7 py-3.5 rounded-full font-bold text-sm uppercase tracking-widest hover:bg-steel-dark transition-colors duration-300 text-center">
@@ -200,7 +200,7 @@ export default async function HomePage() {
                   <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" /></svg>
                 ),
                 title: "Always Available",
-                desc: "Real estate doesn't follow a 9-to-5 schedule — and neither do I. I'm here when you need me.",
+                desc: "Real estate doesn't follow a 9-to-5 schedule. I'm here when you need me.",
               },
             ].map((item) => (
               <div key={item.title} className="text-center p-8 rounded-xl border border-slate-100 hover:border-steel/30 hover:shadow-lg transition-all group">
@@ -239,7 +239,7 @@ export default async function HomePage() {
       <section className="bg-navy py-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-black text-white mb-4">Ready to Make Your Move?</h2>
-          <p className="text-slate-400 text-lg mb-8">Whether you&apos;re buying, selling, or just exploring your options — let&apos;s talk. No pressure, just answers.</p>
+          <p className="text-slate-400 text-lg mb-8">Whether you&apos;re buying, selling, or just exploring your options, let&apos;s talk. No pressure, just answers.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/book" className="bg-steel text-white px-8 py-4 rounded font-bold text-sm uppercase tracking-wide hover:bg-steel-dark transition-colors">
               Book a Consultation

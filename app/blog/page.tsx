@@ -51,7 +51,7 @@ export default async function BlogPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {posts.length === 0 ? (
             <div className="text-center py-24 bg-white rounded-xl border border-gray-100">
-              <p className="text-gray-400 font-medium">No posts yet — check back soon!</p>
+              <p className="text-gray-400 font-medium">No posts yet. Check back soon!</p>
             </div>
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
