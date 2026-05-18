@@ -43,6 +43,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   About
                   <span className="absolute -bottom-0.5 left-0 w-0 h-[1.5px] bg-steel transition-all duration-300 group-hover:w-full" />
                 </Link>
+                <Link
+                  href="/book"
+                  className="bg-steel text-white px-5 py-2 rounded-full font-semibold text-sm hover:bg-steel-dark transition-colors duration-300"
+                >
+                  Book a Call
+                </Link>
                 <a
                   href="tel:+14168333825"
                   className="bg-navy text-white px-5 py-2 rounded-full font-semibold text-sm hover:bg-steel transition-colors duration-300"
@@ -81,6 +87,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   <li><Link href="/listings" className="text-white/85 hover:text-white transition-colors">All Listings</Link></li>
                   <li><Link href="/blog" className="text-white/85 hover:text-white transition-colors">Market Blog</Link></li>
                   <li><Link href="/about" className="text-white/85 hover:text-white transition-colors">About Kay</Link></li>
+                  <li><Link href="/book" className="text-white/85 hover:text-white transition-colors">Book a Consultation</Link></li>
                 </ul>
               </div>
               <div>

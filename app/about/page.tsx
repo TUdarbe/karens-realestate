@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 
+
 export const metadata: Metadata = {
   title: "About Kay | RE/MAX Real Estate",
   description: "Meet Karen, your dedicated RE/MAX real estate agent. Learn about her background, expertise, and commitment to helping you find your perfect home.",
@@ -132,7 +133,10 @@ export default function AboutPage() {
           <h2 className="text-3xl md:text-4xl font-black text-white mb-4">Let&apos;s Work Together</h2>
           <p className="text-slate-400 text-lg mb-8">Ready to buy, sell, or just have questions? Reach out — no pressure, just honest advice.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="tel:+14168333825" className="bg-steel text-white px-8 py-4 rounded font-bold text-sm uppercase tracking-wide hover:bg-steel-dark transition-colors">
+            <Link href="/book" className="bg-steel text-white px-8 py-4 rounded font-bold text-sm uppercase tracking-wide hover:bg-steel-dark transition-colors">
+              Book a Consultation
+            </Link>
+            <a href="tel:+14168333825" className="bg-transparent text-white border-2 border-white px-8 py-4 rounded font-bold text-sm uppercase tracking-wide hover:bg-white/10 transition-colors">
               Call (416) 833-3825
             </a>
             <a href="mailto:kaybolesa@gmail.com" className="bg-transparent text-white border-2 border-white px-8 py-4 rounded font-bold text-sm uppercase tracking-wide hover:bg-white/10 transition-colors">
