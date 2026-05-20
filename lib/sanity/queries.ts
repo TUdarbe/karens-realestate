@@ -14,6 +14,7 @@ export type Listing = {
   description?: string;
   featuredPhoto?: any;
   photos?: any[];
+  featured?: boolean;
 };
 
 export type Post = {
@@ -28,7 +29,7 @@ export type Post = {
 
 export async function getFeaturedListings(): Promise<Listing[]> {
   return client.fetch(
-    `*[_type == "listing" && status == "Active"] | order(_createdAt desc) [0...6] {
+    `*[_type == "listing" && featured == true] | order(_createdAt desc) [0...6] {
       _id, title, "slug": slug.current, status, price, address, city,
       bedrooms, bathrooms, sqft, featuredPhoto
     }`
