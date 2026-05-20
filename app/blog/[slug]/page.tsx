@@ -28,6 +28,14 @@ const portableTextComponents = {
       <blockquote className="border-l-4 border-steel pl-5 my-6 text-gray-600 italic">{children}</blockquote>
     ),
   },
+  list: {
+    bullet: ({ children }: any) => <ul className="list-disc list-outside pl-6 mb-5 space-y-2 text-gray-700">{children}</ul>,
+    number: ({ children }: any) => <ol className="list-decimal list-outside pl-6 mb-5 space-y-2 text-gray-700">{children}</ol>,
+  },
+  listItem: {
+    bullet: ({ children }: any) => <li className="leading-relaxed">{children}</li>,
+    number: ({ children }: any) => <li className="leading-relaxed">{children}</li>,
+  },
   marks: {
     strong: ({ children }: any) => <strong className="font-bold text-gray-900">{children}</strong>,
     em: ({ children }: any) => <em>{children}</em>,
