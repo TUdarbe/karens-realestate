@@ -11,9 +11,11 @@ function formatPrice(price: number) {
 
 function StatusBadge({ status }: { status: string }) {
   const colors: Record<string, string> = {
-    Active: "bg-green-100 text-green-800",
-    Sold: "bg-gray-100 text-gray-700",
+    Available: "bg-green-100 text-green-800",
+    "Coming Soon": "bg-blue-100 text-blue-800",
     Pending: "bg-yellow-100 text-yellow-800",
+    "Sold Conditionally": "bg-orange-100 text-orange-800",
+    Sold: "bg-gray-100 text-gray-700",
   };
   return (
     <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${colors[status] ?? "bg-gray-100 text-gray-600"}`}>
@@ -60,8 +62,10 @@ function ListingCard({ listing }: { listing: Listing }) {
 export default async function ListingsPage() {
   const listings = await getAllListings();
 
-  const active = listings.filter((l) => l.status === "Active");
+  const available = listings.filter((l) => l.status === "Available");
+  const comingSoon = listings.filter((l) => l.status === "Coming Soon");
   const pending = listings.filter((l) => l.status === "Pending");
+  const soldConditionally = listings.filter((l) => l.status === "Sold Conditionally");
   const sold = listings.filter((l) => l.status === "Sold");
 
   return (
@@ -82,14 +86,25 @@ export default async function ListingsPage() {
             </div>
           ) : (
             <div className="space-y-12">
-              {active.length > 0 && (
+              {available.length > 0 && (
                 <div>
                   <h2 className="text-xl font-black text-gray-900 mb-6 flex items-center gap-3">
-                    <span className="w-2 h-6 bg-steel rounded-full inline-block" />
-                    Active ({active.length})
+                    <span className="w-2 h-6 bg-green-500 rounded-full inline-block" />
+                    Available ({available.length})
                   </h2>
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {active.map((l) => <ListingCard key={l._id} listing={l} />)}
+                    {available.map((l) => <ListingCard key={l._id} listing={l} />)}
+                  </div>
+                </div>
+              )}
+              {comingSoon.length > 0 && (
+                <div>
+                  <h2 className="text-xl font-black text-gray-900 mb-6 flex items-center gap-3">
+                    <span className="w-2 h-6 bg-blue-400 rounded-full inline-block" />
+                    Coming Soon ({comingSoon.length})
+                  </h2>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {comingSoon.map((l) => <ListingCard key={l._id} listing={l} />)}
                   </div>
                 </div>
               )}
@@ -101,6 +116,17 @@ export default async function ListingsPage() {
                   </h2>
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {pending.map((l) => <ListingCard key={l._id} listing={l} />)}
+                  </div>
+                </div>
+              )}
+              {soldConditionally.length > 0 && (
+                <div>
+                  <h2 className="text-xl font-black text-gray-900 mb-6 flex items-center gap-3">
+                    <span className="w-2 h-6 bg-orange-400 rounded-full inline-block" />
+                    Sold Conditionally ({soldConditionally.length})
+                  </h2>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {soldConditionally.map((l) => <ListingCard key={l._id} listing={l} />)}
                   </div>
                 </div>
               )}
