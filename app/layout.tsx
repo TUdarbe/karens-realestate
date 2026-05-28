@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
+import MobileNav from "./components/MobileNav";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -57,9 +58,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 </a>
               </nav>
 
-              <a href="tel:+14168333825" className="md:hidden text-steel font-bold text-sm">
-                (416) 833-3825
-              </a>
+              <MobileNav />
             </div>
           </div>
         </header>
