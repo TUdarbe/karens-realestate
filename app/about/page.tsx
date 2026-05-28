@@ -10,99 +10,87 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      {/* Editorial Split Hero */}
-      <section className="relative overflow-hidden" style={{ minHeight: "580px" }}>
-        <div className="grid grid-cols-1 lg:grid-cols-2" style={{ minHeight: "580px" }}>
-
-          {/* Left: Identity panel */}
-          <div className="bg-navy flex flex-col justify-center px-10 md:px-16 lg:px-20 py-20 relative overflow-hidden">
-            <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-steel/40 to-transparent" />
-            <div className="absolute inset-0 opacity-[0.025]" style={{ backgroundImage: "repeating-linear-gradient(45deg, transparent, transparent 8px, rgba(255,255,255,0.5) 8px, rgba(255,255,255,0.5) 9px)" }} />
-
-            <p className="text-steel text-[10px] font-bold uppercase tracking-[0.3em] mb-8">RE/MAX Prime Properties</p>
-            <h1 className="text-6xl md:text-7xl font-black text-white leading-[0.9] tracking-tight mb-5">
-              Kay<br />
-              <span className="text-steel">Bolesa</span>
-            </h1>
-            <div className="w-10 h-[2px] bg-steel/40 mb-5" />
-            <p className="text-slate-400 text-sm leading-relaxed max-w-xs font-light">
-              Registered Realtor · Toronto, York Region & Durham Region
-            </p>
-
-            <div className="mt-10 flex flex-col gap-3">
-              <a href="tel:+14168333825" className="flex items-center gap-3 text-slate-300 hover:text-steel transition-colors text-sm group">
-                <span className="w-7 h-7 rounded-full border border-white/10 flex items-center justify-center group-hover:border-steel/40 transition-colors shrink-0">
-                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
-                </span>
-                (416) 833-3825
-              </a>
-              <a href="mailto:kaybolesa@gmail.com" className="flex items-center gap-3 text-slate-300 hover:text-steel transition-colors text-sm group">
-                <span className="w-7 h-7 rounded-full border border-white/10 flex items-center justify-center group-hover:border-steel/40 transition-colors shrink-0">
-                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-                </span>
-                kaybolesa@gmail.com
-              </a>
-              <div className="flex gap-2 mt-1">
-                <a href="https://www.instagram.com/kaybrealty/" target="_blank" rel="noopener noreferrer" className="w-7 h-7 rounded-full border border-white/10 flex items-center justify-center text-slate-300 hover:text-steel hover:border-steel/40 transition-colors">
-                  <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                </a>
-                <a href="https://www.facebook.com/KayBolesaRealty/" target="_blank" rel="noopener noreferrer" className="w-7 h-7 rounded-full border border-white/10 flex items-center justify-center text-slate-300 hover:text-steel hover:border-steel/40 transition-colors">
-                  <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Right: Photo */}
-          <div className="relative min-h-[380px] lg:min-h-0">
-            <Image
-              src="/bio-pic.png"
-              alt="Kay Bolesa"
-              fill
-              className="object-cover object-top"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              priority
-            />
-            <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-navy to-transparent hidden lg:block" />
-          </div>
+      {/* Hero */}
+      <section className="bg-navy py-14">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-slate-400 text-xs font-bold uppercase tracking-widest mb-2">Get to Know Me</p>
+          <h1 className="text-4xl md:text-5xl font-black text-white">About Kay</h1>
         </div>
       </section>
 
-      {/* Bio */}
-      <section className="bg-white py-20 md:py-28">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-6 text-gray-600 leading-relaxed text-[17px]">
-            <p>
-              I&apos;m Kay Bolesa, a registered Realtor with RE/MAX Prime Properties, proudly serving the City of Toronto, York Region, and Durham Region. With a strong background in both real estate and healthcare leadership, I bring a unique mix of professionalism, compassion, and project management expertise to every client relationship.
-            </p>
-            <p>
-              Before becoming a Realtor, I spent over a decade in leadership roles within healthcare, specializing in quality improvement, client experience, and risk management. That experience taught me how to truly listen, anticipate needs, and guide people through complex decisions with patience and care. Today, I apply those same skills to help buyers, sellers, and renters feel confident and supported through every stage of their real estate journey.
-            </p>
-          </div>
+      {/* Bio Section */}
+      <section className="bg-white py-16 md:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-10 items-start">
 
-          {/* Numbered Approach */}
-          <div className="mt-16 border-t border-slate-100 pt-16">
-            <p className="text-steel text-[10px] font-bold uppercase tracking-[0.25em] mb-10">As Your Agent</p>
-            <div className="grid grid-cols-1 md:grid-cols-2">
-              {[
-                { num: "01", title: "Listen First", desc: "Understanding your goals, budget, and timelines before anything else." },
-                { num: "02", title: "Simplify the Process", desc: "From pre-qualification to keys in hand, I handle the details so you can focus on what matters." },
-                { num: "03", title: "Advocate for You", desc: "Whether negotiating an offer, preparing your home to sell, or uncovering hidden opportunities." },
-                { num: "04", title: "Stay Connected", desc: "Building long-term relationships so I can be your trusted real estate partner for years to come." },
-              ].map((item, i) => (
-                <div key={item.num} className={`flex gap-5 py-8 border-b border-slate-100 ${i % 2 === 0 ? "md:pr-10" : "md:pl-10 md:border-l border-slate-100"}`}>
-                  <span className="text-4xl font-black text-steel/60 leading-none select-none shrink-0">{item.num}</span>
-                  <div>
-                    <h3 className="font-bold text-navy mb-1">{item.title}</h3>
-                    <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
+            {/* Photo + Contact */}
+            <div className="flex flex-col items-center lg:items-start gap-6">
+              <div className="relative w-full h-96 rounded-2xl overflow-hidden shadow-xl">
+                <Image
+                  src="/bio-pic.png"
+                  alt="Kay Bolesa"
+                  fill
+                  className="object-cover object-top"
+                  sizes="(max-width: 1024px) 100vw, 320px"
+                  priority
+                />
+              </div>
+              <div className="bg-sky rounded-xl p-6 w-full">
+                <h3 className="font-black text-navy text-sm uppercase tracking-widest mb-4">Contact Me</h3>
+                <ul className="space-y-3 text-sm">
+                  <li>
+                    <a href="tel:+14168333825" className="flex items-center gap-3 text-steel hover:text-navy transition-colors font-semibold">
+                      <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                      (416) 833-3825
+                    </a>
+                  </li>
+                  <li>
+                    <a href="mailto:kaybolesa@gmail.com" className="flex items-center gap-3 text-steel hover:text-navy transition-colors font-semibold">
+                      <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                      kaybolesa@gmail.com
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/kaybrealty/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-steel hover:text-navy transition-colors font-semibold">
+                      <svg className="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                      Instagram
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.facebook.com/KayBolesaRealty/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-steel hover:text-navy transition-colors font-semibold">
+                      <svg className="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                      Facebook
+                    </a>
+                  </li>
+                  <li className="text-slate-400 text-xs pt-1">RE/MAX Prime Properties</li>
+                </ul>
+              </div>
             </div>
 
-            <p className="text-gray-600 leading-relaxed text-[17px] mt-12">
-              With my knowledge of the real estate market, strong network of lenders, inspectors, and contractors, and a genuine passion for helping people, I make sure you&apos;re supported from the first showing to the final signature.
-            </p>
+            {/* Bio Text */}
+            <div>
+              <p className="text-steel text-xs font-bold uppercase tracking-widest mb-2">RE/MAX Prime Properties</p>
+              <h2 className="text-3xl md:text-4xl font-black text-navy mb-6">Kay Bolesa</h2>
+
+              <div className="space-y-4 text-gray-600 leading-relaxed">
+                <p>
+                  I&apos;m Kay Bolesa, a registered Realtor with RE/MAX Prime Properties, proudly serving the City of Toronto, York Region, and Durham Region. With a strong background in both real estate and healthcare leadership, I bring a unique mix of professionalism, compassion, and project management expertise to every client relationship.
+                </p>
+                <p>
+                  Before becoming a Realtor, I spent over a decade in leadership roles within healthcare, specializing in quality improvement, client experience, and risk management. That experience taught me how to truly listen, anticipate needs, and guide people through complex decisions with patience and care. Today, I apply those same skills to help buyers, sellers, and renters feel confident and supported through every stage of their real estate journey.
+                </p>
+                <p>As your agent, I:</p>
+                <ul className="list-none space-y-2 pl-2">
+                  <li><span className="font-semibold text-navy">Listen first</span> — understanding your goals, budget, and timelines.</li>
+                  <li><span className="font-semibold text-navy">Simplify the process</span> — from pre-qualification to keys in hand, I handle the details so you can focus on what matters.</li>
+                  <li><span className="font-semibold text-navy">Advocate for you</span> — whether negotiating an offer, preparing your home to sell, or uncovering hidden opportunities.</li>
+                  <li><span className="font-semibold text-navy">Stay connected</span> — building long-term relationships so I can be your trusted real estate partner for years to come.</li>
+                </ul>
+                <p>
+                  With my knowledge of the real estate market, strong network of lenders, inspectors, and contractors, and a genuine passion for helping people, I make sure you&apos;re supported from the first showing to the final signature.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
