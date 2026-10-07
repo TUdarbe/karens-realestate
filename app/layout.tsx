@@ -32,6 +32,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </Link>
 
               <nav className="hidden md:flex items-center gap-8">
+                <Link href="/search" className="text-slate-500 hover:text-navy font-medium text-sm transition-colors relative group">
+                  Search Homes
+                  <span className="absolute -bottom-0.5 left-0 w-0 h-[1.5px] bg-steel transition-all duration-300 group-hover:w-full" />
+                </Link>
                 <Link href="/listings" className="text-slate-500 hover:text-navy font-medium text-sm transition-colors relative group">
                   Listings
                   <span className="absolute -bottom-0.5 left-0 w-0 h-[1.5px] bg-steel transition-all duration-300 group-hover:w-full" />
@@ -83,6 +87,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <div>
                 <h3 className="font-bold text-xs uppercase tracking-wider mb-4 text-steel">Quick Links</h3>
                 <ul className="space-y-2.5 text-sm">
+                  <li><Link href="/search" className="text-white/85 hover:text-white transition-colors">Search Homes</Link></li>
                   <li><Link href="/listings" className="text-white/85 hover:text-white transition-colors">All Listings</Link></li>
                   <li><Link href="/blog" className="text-white/85 hover:text-white transition-colors">Market Blog</Link></li>
                   <li><Link href="/about" className="text-white/85 hover:text-white transition-colors">About Kay</Link></li>

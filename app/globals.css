@@ -24,3 +24,53 @@ body {
   background: #ffffff;
   color: #0d2137;
 }
+
+/* Listings map price pins */
+.map-pin {
+  position: absolute;
+  transform: translate(-50%, calc(-100% - 6px));
+  white-space: nowrap;
+  background: #0d2137;
+  color: #fff;
+  font: 700 12px/1 "Montserrat", Arial, sans-serif;
+  padding: 7px 10px;
+  border-radius: 9999px;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 8px rgba(13, 33, 55, 0.3);
+  transition: background 0.15s, transform 0.15s;
+  cursor: pointer;
+}
+.map-pin::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: #fff;
+  border-bottom: 0;
+}
+.map-pin:hover,
+.map-pin-active {
+  background: #5b9ec9;
+  transform: translate(-50%, calc(-100% - 6px)) scale(1.1);
+}
+.map-popup {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  color: #0d2137 !important;
+  text-decoration: none;
+  font-family: "Montserrat", Arial, sans-serif;
+}
+.map-popup img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 6px;
+}
+.map-popup strong { font-size: 15px; font-weight: 800; }
+.map-popup span { font-size: 12px; color: #64748b; }
+.leaflet-popup-content-wrapper { border-radius: 12px; }
+.leaflet-popup-content { margin: 10px; }

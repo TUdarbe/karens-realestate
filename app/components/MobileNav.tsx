@@ -27,6 +27,9 @@ export default function MobileNav() {
       {open && (
         <div className="absolute top-16 left-0 right-0 bg-white border-b border-slate-100 shadow-lg z-50">
           <nav className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
+            <Link href="/search" onClick={() => setOpen(false)} className="text-slate-600 hover:text-navy font-medium text-sm py-3 border-b border-slate-100 transition-colors">
+              Search Homes
+            </Link>
             <Link href="/listings" onClick={() => setOpen(false)} className="text-slate-600 hover:text-navy font-medium text-sm py-3 border-b border-slate-100 transition-colors">
               Listings
             </Link>
