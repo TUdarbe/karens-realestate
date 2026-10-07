@@ -1,7 +1,6 @@
 // Search filter definitions shared by the server (query building) and the
 // client (filter UI). Filters live in the URL so results are shareable.
 
-export const DEFAULT_CITY = "Pickering";
 export const PAGE_SIZE = 24;
 
 export type SearchFilters = {
@@ -74,7 +73,7 @@ export function parseFilters(sp: Record<string, string | string[] | undefined>):
   const city = str(sp.city);
   return {
     type: str(sp.type) === "rent" ? "rent" : "sale",
-    city: city === undefined ? DEFAULT_CITY : city.trim(),
+    city: city?.trim() ?? "",
     minPrice: num(sp.minPrice),
     maxPrice: num(sp.maxPrice),
     beds: num(sp.beds),

@@ -14,7 +14,7 @@ export type MapPin = {
   geocodeQuery?: string;
 };
 
-const PICKERING: L.LatLngTuple = [43.8384, -79.0868];
+const GTA: L.LatLngTuple = [43.75, -79.4];
 const pointCache = new Map<string, { lat: number; lng: number } | null>();
 
 function escapeHtml(s: string) {
@@ -42,7 +42,7 @@ export default function ListingsMap({ pins, activeKey }: { pins: MapPin[]; activ
   // Create the map once.
   useEffect(() => {
     if (!containerRef.current || mapRef.current) return;
-    const map = L.map(containerRef.current, { zoomControl: false, scrollWheelZoom: true }).setView(PICKERING, 12);
+    const map = L.map(containerRef.current, { zoomControl: false, scrollWheelZoom: true }).setView(GTA, 9);
     L.control.zoom({ position: "bottomright" }).addTo(map);
     L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',

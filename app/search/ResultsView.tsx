@@ -181,7 +181,7 @@ export default function ResultsView({ filters, listings, total, error }: { filte
             <p className="mt-1 text-sm text-slate-500">Try removing a filter or searching a nearby area.</p>
             <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
               {filters.city && (
-                <Link href={`${pathname}?city=${filters.type === "rent" ? "&type=rent" : ""}`} className="rounded-full bg-steel px-6 py-2.5 text-sm font-bold text-white hover:bg-steel-dark">
+                <Link href={`${pathname}${filters.type === "rent" ? "?type=rent" : ""}`} className="rounded-full bg-steel px-6 py-2.5 text-sm font-bold text-white hover:bg-steel-dark">
                   Search all areas
                 </Link>
               )}
