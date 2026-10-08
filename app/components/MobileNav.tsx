@@ -30,9 +30,11 @@ export default function MobileNav() {
             <Link href="/search" onClick={() => setOpen(false)} className="text-slate-600 hover:text-navy font-medium text-sm py-3 border-b border-slate-100 transition-colors">
               Search Homes
             </Link>
+            {/* Listings hidden for now
             <Link href="/listings" onClick={() => setOpen(false)} className="text-slate-600 hover:text-navy font-medium text-sm py-3 border-b border-slate-100 transition-colors">
               Listings
             </Link>
+            */}
             <Link href="/blog" onClick={() => setOpen(false)} className="text-slate-600 hover:text-navy font-medium text-sm py-3 border-b border-slate-100 transition-colors">
               Blog
             </Link>

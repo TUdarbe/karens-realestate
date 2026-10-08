@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { formatPrice } from "@/lib/ampre/filters";
 import { getListing } from "@/lib/ampre/listings";
+import PhotoCarousel from "./PhotoCarousel";
 
 type Props = { params: Promise<{ key: string }> };
 
@@ -31,17 +31,11 @@ export default async function SearchListingPage({ params }: Props) {
 
   return (
     <div className="bg-sky pb-16">
-      {/* Photos: swipeable strip */}
+      {/* Photos: swipe, arrows, or Left/Right keys */}
       <section className="bg-navy">
         <div className="mx-auto max-w-7xl">
           {listing.photos.length > 0 ? (
-            <div className="flex snap-x snap-mandatory gap-1 overflow-x-auto">
-              {listing.photos.map((src, i) => (
-                <div key={src} className="relative h-72 w-[90vw] shrink-0 snap-start sm:h-96 sm:w-[46rem]">
-                  <Image src={src} alt={`Photo ${i + 1} of ${listing.photos.length}`} fill priority={i === 0} className="object-cover" sizes="(max-width: 640px) 90vw, 46rem" />
-                </div>
-              ))}
-            </div>
+            <PhotoCarousel photos={listing.photos} />
           ) : (
             <div className="flex h-60 items-center justify-center text-white/40">No photos available</div>
           )}

@@ -70,6 +70,32 @@ function ListingCard({ l, onHover }: { l: ListingSummary; onHover: (key: string 
   );
 }
 
+function HelpCallout() {
+  return (
+    <div className="relative mt-10 overflow-hidden rounded-2xl bg-navy px-6 py-8 text-white shadow-md sm:px-8">
+      <div className="pointer-events-none absolute right-0 top-0 h-64 w-64 opacity-20" style={{ background: "radial-gradient(circle at 70% 30%, #5B9EC9, transparent 65%)" }} />
+      <div className="relative flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+        <div className="max-w-xl">
+          <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.18em] text-steel">Personal Home Search</p>
+          <h2 className="text-xl font-black md:text-2xl">Not finding what you&apos;re looking for?</h2>
+          <p className="mt-2 text-sm leading-relaxed text-white/75">
+            These are just some of the homes I can help you explore. Tell me what you need and I&apos;ll find options across the GTA,
+            including listings from other brokerages.
+          </p>
+        </div>
+        <div className="flex shrink-0 flex-col gap-2 sm:flex-row md:flex-col">
+          <Link href="/book" className="rounded-full bg-steel px-6 py-3 text-center text-sm font-bold transition-colors hover:bg-steel-dark">
+            Tell Kay What You&apos;re Looking For
+          </Link>
+          <a href="tel:+14168333825" className="rounded-full border border-white/20 px-6 py-3 text-center text-sm font-bold transition-colors hover:bg-white/10">
+            (416) 833-3825
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function Pagination({ page, totalPages }: { page: number; totalPages: number }) {
   const searchParams = useSearchParams();
   const pathname = usePathname();
@@ -146,7 +172,8 @@ export default function ResultsView({ filters, listings, total, error }: { filte
         <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <h1 className="text-2xl font-black text-navy md:text-3xl">{title}</h1>
-            <p className="mt-1 text-sm text-slate-500">
+            <p className="mt-1 text-sm font-medium text-slate-600">Browse available properties listed by RE/MAX Prime Properties</p>
+            <p className="mt-1 text-xs text-slate-400">
               {total > 0
                 ? `${total.toLocaleString()} ${total === 1 ? "property" : "properties"}${totalPages > 1 ? ` · showing ${first}–${Math.min(first + PAGE_SIZE - 1, total)}` : ""}`
                 : "0 properties"}
@@ -175,26 +202,27 @@ export default function ResultsView({ filters, listings, total, error }: { filte
             <Pagination page={totalPages + 1} totalPages={totalPages} />
           </div>
         ) : listings.length === 0 ? (
-          <div className="rounded-xl border border-gray-100 bg-white px-6 py-16 text-center">
-            <svg className="mx-auto mb-4 h-12 w-12 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 9.75L12 3l9 6.75V21H3V9.75z" /></svg>
-            <p className="font-semibold text-navy">No homes match your search{filters.city ? ` in ${filters.city}` : ""}.</p>
-            <p className="mt-1 text-sm text-slate-500">Try removing a filter or searching a nearby area.</p>
-            <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
-              {filters.city && (
-                <Link href={`${pathname}${filters.type === "rent" ? "?type=rent" : ""}`} className="rounded-full bg-steel px-6 py-2.5 text-sm font-bold text-white hover:bg-steel-dark">
-                  Search all areas
-                </Link>
-              )}
-              <Link href="/book" className="rounded-full border border-slate-200 px-6 py-2.5 text-sm font-bold text-navy hover:border-steel">
-                Ask Kay about off-market homes
-              </Link>
+          <>
+            <div className="rounded-xl border border-gray-100 bg-white px-6 py-16 text-center">
+              <svg className="mx-auto mb-4 h-12 w-12 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 9.75L12 3l9 6.75V21H3V9.75z" /></svg>
+              <p className="font-semibold text-navy">No homes match your search{filters.city ? ` in ${filters.city}` : ""}.</p>
+              <p className="mt-1 text-sm text-slate-500">Try removing a filter or searching a nearby area.</p>
+              <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
+                {filters.city && (
+                  <Link href={`${pathname}${filters.type === "rent" ? "?type=rent" : ""}`} className="rounded-full bg-steel px-6 py-2.5 text-sm font-bold text-white hover:bg-steel-dark">
+                    Search all areas
+                  </Link>
+                )}
+              </div>
             </div>
-          </div>
+            <HelpCallout />
+          </>
         ) : (
           <>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 2xl:grid-cols-3">
               {listings.map((l) => <ListingCard key={l.key} l={l} onHover={setHovered} />)}
             </div>
+            <HelpCallout />
             <Pagination page={filters.page} totalPages={totalPages} />
           </>
         )}

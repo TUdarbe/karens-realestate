@@ -99,10 +99,12 @@ function BlogCard({ post }: { post: Post }) {
 }
 
 export default async function HomePage() {
-  const [listings, posts] = await Promise.all([
-    getFeaturedListings(),
-    getFeaturedPosts(),
-  ]);
+  // Featured Listings section is hidden for now, so its query is skipped too.
+  // const [listings, posts] = await Promise.all([
+  //   getFeaturedListings(),
+  //   getFeaturedPosts(),
+  // ]);
+  const posts = await getFeaturedPosts();
 
   return (
     <>
@@ -131,7 +133,8 @@ export default async function HomePage() {
               Dedicated RE/MAX agent. Local expertise. Real results. Whether you&apos;re buying, selling, or just starting to look.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
-              <Link href="/listings" className="bg-steel text-white px-7 py-3.5 rounded-full font-bold text-sm uppercase tracking-widest hover:bg-steel-dark transition-colors duration-300 text-center">
+              {/* Pointing to Search Homes for now. Original: href="/listings" */}
+              <Link href="/search" className="bg-steel text-white px-7 py-3.5 rounded-full font-bold text-sm uppercase tracking-widest hover:bg-steel-dark transition-colors duration-300 text-center">
                 Browse Listings
               </Link>
               <a href="tel:+14168333825" className="text-slate-300 border border-white/15 px-7 py-3.5 rounded-full font-medium text-sm uppercase tracking-widest hover:bg-white/5 hover:border-white/30 hover:text-white transition-all duration-300 text-center">
@@ -142,7 +145,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Featured Listings */}
+      {/* Featured Listings: hidden for now
       <section className="bg-sky py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-end justify-between mb-10">
@@ -170,6 +173,7 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
+      */}
 
       {/* Why Work With Me */}
       <section className="bg-white py-16 md:py-20">
